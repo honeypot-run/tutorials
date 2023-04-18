@@ -14,7 +14,8 @@ This tutorial includes the four quick steps:
 1. We have created a simple demo web page that contains a minimal HTML file. To start a local server, run the following commands:
 
   ```sh
-  cd website/
+  git clone git@github.com:honeypot-run/tutorials.git honeypot-tutorials
+  cd honeypot-tutorials/01-onboarding/website/
   npm install -y
   npm start
   ```
@@ -101,7 +102,7 @@ We have included a basic puppeteer stealth bot in the `01-onboarding/bot/` direc
 2. Then, in a separate shell, install and run the bot:
 
     ```sh
-    cd 01-onboarding/bot
+    cd honeypot-tutorials/01-onboarding/bot
     npm install
     npm start
     ```
