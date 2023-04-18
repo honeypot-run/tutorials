@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Honeypot tests</title>
+    <!-- TODO: add your honeypot script below -->
+    <!-- <script async src="ADD_HONEYPOT_URL_HERE"></script> -->
+
+    <!-- This shows how to access the honeypot data after it's been injected into the web page -->
+    <script>
+        async function checkHoney() {
+            while (!(window.hpot && window.hpot.get && window.hpot.get())) {
+                await new Promise(resolve => setTimeout(resolve, 10));
+            }
+            return window.hpot.get();
+        }
+
+        // get the honey (i.e. the user data)
+        checkHoney().then((honey) => {
+            // access the data
+            const fingerprint = honey.fingerprint.id
+            const flags = honey.flags
+            // etc...
+            document.getElementById('fingerprint').innerHTML = fingerprint
+        })
+
+    </script>
+  </head>
+  <body>
+    <h1>Honeypot test!</h1>
+    <div>
+        <p>
+            Fingerprint:
+            <span id="fingerprint">...</span>
+        </p>
+    </div>
+  </body>
+</html>
