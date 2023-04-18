@@ -69,16 +69,11 @@ This tutorial includes the four quick steps:
 
    ```html
     <script>
-        async function checkHoney() {
-            while (!(window.hpot && window.hpot.get && window.hpot.get())) {
-                await new Promise(resolve => setTimeout(resolve, 10));
-            }
-            return window.hpot.get();
-        }
+        // wait for the honey (i.e. the visitor information)
+        async function checkHoney() { while (!(window.hpot && window.hpot.get && window.hpot.get())) { await new Promise(resolve => setTimeout(resolve, 10)); } return window.hpot.get();}
 
-        // get the honey (i.e. the user data)
+        // access the data
         checkHoney().then((honey) => {
-            // access the data
             const fingerprint = honey.fingerprint.id
             const flags = honey.flags
             // etc...
