@@ -10,7 +10,7 @@ puppeteer.use(StealthPlugin())
 puppeteer.launch({ headless: true, executablePath: executablePath(), }).then(async browser => {
   console.log('Running bot')
   const page = await browser.newPage()
-  await page.goto('http://127.0.0.1:3000');
+  await page.goto('https://honeypot.run/demo09');
   // simulate time on page
   console.log('Doing bot stuff')
   await page.waitForTimeout(5000);
