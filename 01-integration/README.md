@@ -97,7 +97,7 @@ This tutorial includes the four quick steps:
   
   Your fingerprint will be unique and will remain the same even when you change browsers / IP addresses.
   
-  [honeypot]: https://honeypot.run/
-  [local-demo]: http://127.0.0.1:3000/
+[honeypot]: https://honeypot.run/
+[local-demo]: http://127.0.0.1:3000/
 
  
