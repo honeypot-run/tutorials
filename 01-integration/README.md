@@ -57,8 +57,10 @@ This tutorial includes the four quick steps:
 3. After following the integration instructions in the Honeypot UI, you should have:
 
 
-  - a file called `hp.js` in the `public/` directory (this file should be downloaded from the UI).
-  - a new script tag in your HTML page, where the `src` is set to your honeypot URL. e.g.
+  - a file called `hp.js` in the `public/` directory
+    - This file should be downloaded from the UI and copied to the `01-integration/public` directory.
+    - e.g. `cp ~/Downloads/hp.js path/to/honeypot-tutorials/01-integration/public`
+  - a new script tag in your HTML page ([public/index.html](https://github.com/honeypot-run/tutorials/blob/27ed943fc62ac634139e2896ac7f2c2eb63e84d4/01-integration/public/index.html#L5-L6)), where the `src` is set to your honeypot URL. e.g.
    
    ```html
     <!DOCTYPE html>
@@ -71,7 +73,7 @@ This tutorial includes the four quick steps:
    ```
    
    
-   To access the fingerprint / visitor information (i.e. the _honey_), uncomment the following JS code from the HTML page. This code makes all of the honeypot data available under a JS object called `honey`.
+   To access the fingerprint / visitor information (i.e. the _honey_), we have added the following JS code from the HTML page. This code makes all of the honeypot data available under a JS object called `honey`.
 
    ```html
     <script>
@@ -88,7 +90,7 @@ This tutorial includes the four quick steps:
     </script>
    ```
 
-  Next, reload your `index.html` page in your browser. You should see a fingerprint rendered to the screen. e.g.
+  Next, reload your `index.html` page in your browser. After a second or two, you should see a fingerprint rendered to the screen. e.g.
   
   ```sh
   Fingerprint: 40dcd21f-c68c-4533-97fc-93679853e940
