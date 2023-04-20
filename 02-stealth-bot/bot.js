@@ -13,7 +13,7 @@ puppeteer.launch({ headless: true, executablePath: executablePath(), }).then(asy
   await page.goto('https://honeypot.run/demo09');
   // simulate time on page
   console.log('Doing bot stuff')
-  await page.waitForTimeout(5000);
+  await page.waitForTimeout(7000);
   // exit
   await browser.close()
   console.log(`All done ✨`)
